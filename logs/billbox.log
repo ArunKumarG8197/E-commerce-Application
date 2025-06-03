@@ -1,0 +1,256 @@
+06-02 10:41:33 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 27564 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 10:41:33 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 10:41:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 10:41:35 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+06-02 10:41:36 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 10:41:36 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 10:41:36 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 10:41:36 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 10:41:36 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2850 ms
+06-02 10:41:36 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+06-02 10:41:36 - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+06-02 10:41:37 - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+06-02 10:41:37 - o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.ecommerce.project.SbEcomApplication.main(SbEcomApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: org.postgresql.Driver
+	at org.springframework.util.Assert.state(Assert.java:97)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:175)
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 36 common frames omitted
+06-02 10:43:24 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 13280 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 10:43:24 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 10:43:25 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 10:43:26 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+06-02 10:43:27 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 10:43:27 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 10:43:27 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 10:43:27 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 10:43:27 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2615 ms
+06-02 10:43:27 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-02 10:43:27 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+06-02 10:43:27 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06-02 10:43:28 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06-02 10:43:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06-02 10:43:28 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4bcdd11
+06-02 10:43:28 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06-02 10:43:28 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06-02 10:43:30 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-02 10:43:30 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-02 10:43:31 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+06-02 10:43:32 - c.e.project.SbEcomApplication - Started SbEcomApplication in 8.282 seconds (process running for 8.95)
+06-02 10:46:48 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-02 10:46:48 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06-02 10:46:48 - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+06-02 10:51:59 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+06-02 10:52:57 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-02 10:52:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06-02 10:52:57 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06-02 11:37:26 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 19952 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 11:37:26 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 11:37:27 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 11:37:28 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
+06-02 11:37:29 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 11:37:29 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 11:37:29 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 11:37:29 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 11:37:29 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3082 ms
+06-02 11:37:29 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-02 11:37:30 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+06-02 11:37:30 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06-02 11:37:30 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06-02 11:37:30 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06-02 11:37:31 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c82031b
+06-02 11:37:31 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06-02 11:37:31 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06-02 11:37:32 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-02 11:37:33 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-02 11:37:34 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+06-02 11:37:34 - c.e.project.SbEcomApplication - Started SbEcomApplication in 9.488 seconds (process running for 10.388)
+06-02 11:39:18 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-02 11:39:18 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06-02 11:39:18 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06-02 11:39:32 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 12868 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 11:39:32 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 11:39:33 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 11:39:33 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interface.
+06-02 11:39:34 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 11:39:34 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 11:39:34 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 11:39:35 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 11:39:35 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2845 ms
+06-02 11:39:35 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-02 11:39:35 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+06-02 11:39:35 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06-02 11:39:36 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06-02 11:39:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06-02 11:39:36 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1216eb3f
+06-02 11:39:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06-02 11:39:36 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06-02 11:39:38 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-02 11:39:38 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-02 11:39:40 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+06-02 11:39:40 - c.e.project.SbEcomApplication - Started SbEcomApplication in 8.947 seconds (process running for 9.744)
+06-02 11:41:26 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-02 11:41:26 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06-02 11:41:26 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06-02 11:41:31 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 7736 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 11:41:31 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 11:41:32 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 11:41:32 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+06-02 11:41:33 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 11:41:33 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 11:41:33 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 11:41:34 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 11:41:34 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3005 ms
+06-02 11:41:34 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-02 11:41:34 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+06-02 11:41:34 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06-02 11:41:35 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06-02 11:41:35 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06-02 11:41:35 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3af236d0
+06-02 11:41:35 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06-02 11:41:35 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06-02 11:41:37 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-02 11:41:37 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-02 11:41:39 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+06-02 11:41:39 - c.e.project.SbEcomApplication - Started SbEcomApplication in 9.215 seconds (process running for 9.997)
+06-02 11:47:21 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-02 11:47:21 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06-02 11:47:21 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+06-02 11:47:21 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNumber' for method parameter type Integer is not present]
+06-02 11:53:03 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-02 11:53:03 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06-02 11:53:03 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06-02 11:53:10 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 21724 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 11:53:10 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 11:53:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 11:53:12 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+06-02 11:53:13 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 11:53:13 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 11:53:13 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 11:53:13 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 11:53:13 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3122 ms
+06-02 11:53:14 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-02 11:53:14 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+06-02 11:53:14 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06-02 11:53:14 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06-02 11:53:15 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06-02 11:53:15 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@44faa4f2
+06-02 11:53:15 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06-02 11:53:15 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06-02 11:53:17 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-02 11:53:17 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-02 11:53:18 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+06-02 11:53:18 - c.e.project.SbEcomApplication - Started SbEcomApplication in 9.47 seconds (process running for 10.296)
+06-02 11:53:24 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-02 11:53:24 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06-02 11:53:24 - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+06-02 12:00:49 - o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pageNumber' for method parameter type Integer is not present]
+06-02 12:01:22 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-02 12:01:22 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06-02 12:01:22 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06-02 12:01:30 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 15076 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 12:01:30 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 12:01:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 12:01:31 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interface.
+06-02 12:01:33 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 12:01:33 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 12:01:33 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 12:01:33 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 12:01:33 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3259 ms
+06-02 12:01:33 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-02 12:01:33 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+06-02 12:01:34 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06-02 12:01:34 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06-02 12:01:34 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06-02 12:01:35 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58c42c8c
+06-02 12:01:35 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06-02 12:01:35 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06-02 12:01:36 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-02 12:01:37 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-02 12:01:38 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+06-02 12:01:38 - c.e.project.SbEcomApplication - Started SbEcomApplication in 10.019 seconds (process running for 10.814)
+06-02 12:01:42 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-02 12:01:42 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06-02 12:01:42 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+06-02 12:31:33 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m28s416ms740µs499ns).
+06-02 12:33:36 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-02 12:33:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06-02 12:33:36 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+06-02 12:34:00 - c.e.project.SbEcomApplication - Starting SbEcomApplication using Java 21.0.4 with PID 14664 (D:\E-commerce-Application\target\classes started by arung in D:\E-commerce-Application)
+06-02 12:34:00 - c.e.project.SbEcomApplication - No active profile set, falling back to 1 default profile: "default"
+06-02 12:34:01 - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-02 12:34:02 - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
+06-02 12:34:03 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+06-02 12:34:03 - o.a.catalina.core.StandardService - Starting service [Tomcat]
+06-02 12:34:03 - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+06-02 12:34:03 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06-02 12:34:03 - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2978 ms
+06-02 12:34:03 - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-02 12:34:03 - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+06-02 12:34:03 - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+06-02 12:34:04 - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+06-02 12:34:04 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06-02 12:34:04 - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@661e1399
+06-02 12:34:04 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06-02 12:34:05 - org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+06-02 12:34:06 - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+06-02 12:34:06 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-02 12:34:08 - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+06-02 12:34:08 - c.e.project.SbEcomApplication - Started SbEcomApplication in 9.286 seconds (process running for 10.101)
+06-02 12:34:22 - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-02 12:34:22 - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06-02 12:34:22 - o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+06-02 12:45:16 - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-02 12:45:16 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+06-02 12:45:16 - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
